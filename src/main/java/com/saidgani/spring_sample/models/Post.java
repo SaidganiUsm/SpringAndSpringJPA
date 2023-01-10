@@ -9,6 +9,15 @@ public class Post {
     @Column(name = "id", nullable = false)
     private Long id;
 
+    public Post(String title, String anons, String full_text) {
+        this.title = title;
+        this.anons = anons;
+        this.full_text = full_text;
+    }
+
+    public Post() {
+    }
+
     private String title, anons, full_text;
     private int views;
 
@@ -52,4 +61,6 @@ public class Post {
     public void setId(Long id) {
         this.id = id;
     }
+
+
 }
